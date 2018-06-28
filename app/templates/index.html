@@ -33,10 +33,14 @@
                     <td>
                         <a href="{{ article.source }}" target="_blank">{{ article.title }}</a>
                     </td>
-                    <td class="text-center">{{ article.author }}</td>
+                    <td class="text-center">
+                        <a href="{{ url_for('main.search_by_field', field='author', value=article.author) }}">{{ article.author }}</a>
+                    </td>
                     <td class="text-center">{{ moment(article.date).fromNow() }}</td>
                     <td class="text-center" style="color: green;">{{ article.view }}</td>
-                    <td class="text-center">{{ article.site }}</td>
+                    <td class="text-center">
+                         <a href="{{ url_for('main.search_by_field', field='site', value=article.site) }}">{{ article.site }}</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>

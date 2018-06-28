@@ -78,7 +78,6 @@ def get_sorted_article_query():
     Returns:
         object: Article.query (sorted)
     """
-
     sort_key = request.args.get('s')
     order = request.args.get('o')
     article_query = None
@@ -90,3 +89,19 @@ def get_sorted_article_query():
     else:
         article_query = Article.query
     return article_query
+
+
+@bp.route('/<string:field>/<string:value>')
+def search_by_field(field, value):
+    page = request.args.get('page', 1, type=int)
+    article_query = get_sorted_article_query()
+    filtered_query = None
+    if field == 'author':
+        filtered_query = article_query.filter_by(author=value)
+    elif field == 'site':
+        filtered_query = article_query.filter_by(site=value)
+    else:
+        filtered_query = article_query
+    pagination = filtered_query.paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    articles = pagination.items
+    return render_template('index.html', pagination=pagination, articles=articles)
