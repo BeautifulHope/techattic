@@ -1,0 +1,138 @@
+# English translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-20 15:34+0800\n"
+"PO-Revision-Date: 2018-06-19 18:46+0800\n"
+"Last-Translator: \n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:19
+msgid "对不起，您还没有登录！"
+msgstr "Sorry, you have to login first!"
+
+#: app/auth/forms.py:9 app/auth/forms.py:32
+msgid "用户名"
+msgstr "username"
+
+#: app/auth/forms.py:10 app/auth/forms.py:34
+msgid "密码"
+msgstr "password"
+
+#: app/auth/forms.py:11
+msgid "记住我"
+msgstr "remember me"
+
+#: app/auth/forms.py:12 app/templates/nav.html:18
+msgid "登录"
+msgstr "login"
+
+#: app/auth/forms.py:33
+msgid "邮箱"
+msgstr "email"
+
+#: app/auth/forms.py:35
+msgid "确认密码"
+msgstr "confirm"
+
+#: app/auth/forms.py:36
+msgid "注册"
+msgstr "register"
+
+#: app/auth/routes.py:18
+msgid "登录成功！"
+msgstr "Login Successfully!"
+
+#: app/auth/routes.py:31
+msgid "注册成功！"
+msgstr "Registered successfully!"
+
+#: app/templates/index.html:7
+msgid "这是一个flask的示例app"
+msgstr "This is a flask demo app"
+
+#: app/templates/index.html:17
+msgid "精炼的代码"
+msgstr "Concise code"
+
+#: app/templates/index.html:20
+msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
+msgstr ""
+"Compared to other flask projects, the project's code is meticulous and "
+"easy to understand, and complies with best practices for beginners to get"
+" started quickly."
+
+#: app/templates/index.html:28
+msgid "完备的扩展"
+msgstr "Abundant plugin"
+
+#: app/templates/index.html:31
+msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
+msgstr ""
+"This project integrates basic extensions such as front-end templates, "
+"forms, databases, and registry logins to help developers quickly build "
+"web pages."
+
+#: app/templates/index.html:39
+msgid "懒人的最爱"
+msgstr "Lazyman's favourite"
+
+#: app/templates/index.html:42
+msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
+msgstr ""
+"If you want to build a full-featured website with flask quickly, then "
+"this NB template must be your best choice!"
+
+#: app/templates/nav.html:27
+msgid "我的主页"
+msgstr "My home"
+
+#: app/templates/nav.html:30
+msgid "登出"
+msgstr "logout"
+
+#: app/templates/user.html:10
+msgid "最近活动于:"
+msgstr "Recently at:"
+
+#: app/templates/auth/login.html:6
+msgid "请登录"
+msgstr "Login"
+
+#: app/templates/auth/login.html:10
+msgid "新用户？"
+msgstr "New ass?"
+
+#: app/templates/auth/login.html:10
+msgid "点此注册"
+msgstr "Click me to register"
+
+#: app/templates/auth/register.html:6
+msgid "请注册"
+msgstr "Registration"
+
+#: app/templates/errors/404.html:5
+msgid "404 Not Found"
+msgstr "404 Not Found"
+
+#: app/templates/errors/500.html:5
+msgid "服务器出错"
+msgstr "500 Interval Server Error"
+
+#~ msgid "该用户不存在，请重试！"
+#~ msgstr "User doesn't exist!"
+
+#~ msgid "密码错误，请重试！"
+#~ msgstr "Wrong password!"
+

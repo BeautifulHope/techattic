@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block app_content %}
+<div class="row clearfix">
+    <div class="col-md-12 column">
+        <div class="jumbotron">
+            <h1>{{_('欢迎来到Techattic')}}</h1>
+            <p>
+                <a class="btn btn-primary btn-large" href="https://zhuanlan.zhihu.com/c_193656487">Pythonが大好き</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="row clearfix">
+    <div class="col-md-4 column">
+        <h2>
+            <i class="fa fa-code"> {{_('发现最新IT技术干货')}}</i>
+        </h2>
+        <p>
+            {{_('我们利用爬虫技术爬取了约10家网站的优秀IT博客文章，供热爱技术的你们学习。网站几乎时刻都在更新，因此不必担心文章过时哦。')}}
+        </p>
+        <p>
+            <a class="btn" href="#">More »</a>
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2>
+            <i class="fa fa-wrench"> {{_('提供收藏和上传功能')}}</i>
+        </h2>
+        <p>
+            {{_('遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢的文章啦！除了收藏好文章，你还可以上传自己的文章哦！')}}
+        </p>
+        <p>
+            <a class="btn" href="#">More »</a>
+        </p>
+    </div>
+    <div class="col-md-4 column">
+        <h2>
+            <i class="fa fa-heart"> {{_('专注用户体验500年')}}</i>
+        </h2>
+        <p>
+            {{_('本网站除了基本的展示功能外，还提供了文章排序，文章全文搜索，文章分享，开放API，RSS订阅等一系列给力的功能，用到就是爽到！')}}
+        </p>
+        <p>
+            <a class="btn" href="#">More »</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

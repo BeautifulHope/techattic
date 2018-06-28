@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% from "bootstrap/pagination.html" import render_pagination %}
+
+{% block app_content %}
+    {% if articles %}
+    {{ render_pagination(pagination) }}
+    {% else %}
+    <h1>{{_('这里空空如也QAQ')}}</h1>
+    {% endif %}
+{% endblock %}

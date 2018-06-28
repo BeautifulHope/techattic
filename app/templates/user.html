@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+
+{% block app_content %}
+    <table class="table table-hover">
+        <tr>
+            <td width="256px"><img src="{{user.avatar(256)}}"></td>
+            <td>
+            <h1>{{user.username}}</h1>
+            {% if user.last_seen %}
+            <p>{{_('最近活动于:')}} {{ moment(user.last_seen).format('LLL') }}</p>
+            {% endif %}
+            </td>
+        </tr>
+    </table>
+{% endblock %}

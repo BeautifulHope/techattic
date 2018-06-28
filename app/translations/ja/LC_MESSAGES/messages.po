@@ -1,0 +1,130 @@
+# Japanese translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-06-20 15:34+0800\n"
+"PO-Revision-Date: 2018-06-19 18:47+0800\n"
+"Last-Translator: \n"
+"Language: ja\n"
+"Language-Team: ja <LL@li.org>\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/__init__.py:19
+msgid "对不起，您还没有登录！"
+msgstr "その前に、ログインは必要です！"
+
+#: app/auth/forms.py:9 app/auth/forms.py:32
+msgid "用户名"
+msgstr "ユーザ名"
+
+#: app/auth/forms.py:10 app/auth/forms.py:34
+msgid "密码"
+msgstr "パスワード"
+
+#: app/auth/forms.py:11
+msgid "记住我"
+msgstr "覚える"
+
+#: app/auth/forms.py:12 app/templates/nav.html:18
+msgid "登录"
+msgstr "ログイン"
+
+#: app/auth/forms.py:33
+msgid "邮箱"
+msgstr "メール"
+
+#: app/auth/forms.py:35
+msgid "确认密码"
+msgstr "パスワード確認"
+
+#: app/auth/forms.py:36
+msgid "注册"
+msgstr "新规登录"
+
+#: app/auth/routes.py:18
+msgid "登录成功！"
+msgstr "ログイン成功!"
+
+#: app/auth/routes.py:31
+msgid "注册成功！"
+msgstr "登録成功！"
+
+#: app/templates/index.html:7
+msgid "这是一个flask的示例app"
+msgstr "これはフラスコのサンプルアプリです"
+
+#: app/templates/index.html:17
+msgid "精炼的代码"
+msgstr "洗練されたコード"
+
+#: app/templates/index.html:20
+msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
+msgstr "他のフラスコプロジェクトと比較して、プロジェクトのコードは細心の注意を払いやすく、初心者のためのベストプラクティスを迅速に開始することができます。"
+
+#: app/templates/index.html:28
+msgid "完备的扩展"
+msgstr "完全なプラグイン"
+
+#: app/templates/index.html:31
+msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
+msgstr "このプロジェクトでは、フロントエンドのテンプレート、フォーム、データベース、レジストリログインなどの基本的な拡張機能を統合して、開発者がWebページをすばやく構築できるようにします。"
+
+#: app/templates/index.html:39
+msgid "懒人的最爱"
+msgstr "怠け者の最愛"
+
+#: app/templates/index.html:42
+msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
+msgstr "フラスコでフル機能のページをすばやく作成したい場合は、このテンプレートを最善の選択肢にする必要があります。"
+
+#: app/templates/nav.html:27
+msgid "我的主页"
+msgstr "ホームページ"
+
+#: app/templates/nav.html:30
+msgid "登出"
+msgstr "ログアウト"
+
+#: app/templates/user.html:10
+msgid "最近活动于:"
+msgstr "最近の活躍："
+
+#: app/templates/auth/login.html:6
+msgid "请登录"
+msgstr "ログイン"
+
+#: app/templates/auth/login.html:10
+msgid "新用户？"
+msgstr "新規ユーザー？"
+
+#: app/templates/auth/login.html:10
+msgid "点此注册"
+msgstr "ここをクリックには登録する"
+
+#: app/templates/auth/register.html:6
+msgid "请注册"
+msgstr "新规登录"
+
+#: app/templates/errors/404.html:5
+msgid "404 Not Found"
+msgstr "404 Not Found"
+
+#: app/templates/errors/500.html:5
+msgid "服务器出错"
+msgstr "サーバーエラー"
+
+#~ msgid "该用户不存在，请重试！"
+#~ msgstr "このユーザーは存在しません、再び試しください！"
+
+#~ msgid "密码错误，请重试！"
+#~ msgstr "パスワードが間違っています、再び試しください！"
+
