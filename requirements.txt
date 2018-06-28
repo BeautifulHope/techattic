@@ -17,4 +17,3 @@ arrow
 pymysql
 redis
 pandas
-elasticsearch

@@ -5,6 +5,7 @@ from app.models import User, db, Article
 from datetime import datetime
 from flask_babel import get_locale
 from app.main.forms import SearchForm
+from sqlalchemy.sql.expression import func
 
 
 @bp.before_app_request
@@ -39,5 +40,16 @@ def user(username):
 
 
 @bp.route('/search')
+@login_required
 def search():
-    pass
+    q = g.search_form.q.data
+    page = request.args.get('page', 1, type=int)
+    pagination = Article.query.filter(Article.title.ilike(f'%{q}%')).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    articles = pagination.items
+    return render_template('index.html', pagination=pagination, articles=articles)
+
+
+@bp.route('/random')
+def random():
+    random_articles = Article.query.order_by(func.random()).limit(current_app.config['ARTICLE_PER_PAGE']).all()
+    return render_template('index.html', articles=random_articles)

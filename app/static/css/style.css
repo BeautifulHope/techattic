@@ -4,6 +4,20 @@ html {
     overflow-y: scroll;
 }
 
+.article-list > tbody > tr > td {
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 603px;
+    word-break: break-all;
+    white-space: nowrap;
+}
+
+.center {
+    float: none;
+    text-align: center;
+}
+
 /* footer */
 
 footer {

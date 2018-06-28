@@ -3,7 +3,37 @@
 
 {% block app_content %}
     {% if articles %}
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover table-striped article-list">
+            <thead>
+                <tr>
+                    <th style="width:auto;">{{_('Article')}}</th>
+                    <th class="text-center" style="width:160px;">{{_('Author')}}</th>
+                    <th class="text-center" style="width:100px;">{{_('Date')}}</th>
+                    <th class="text-center" style="width:100px;">{{_('View')}}</th>
+                    <th class="text-center" style="width:100px;">{{_('Site')}}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for article in articles %}
+                <tr>
+                    <td>
+                        <a href="{{ article.source }}" target="_blank">{{ article.title }}</a>
+                    </td>
+                    <td class="text-center">{{ article.author }}</td>
+                    <td class="text-center">{{ moment(article.date).fromNow() }}</td>
+                    <td class="text-center" style="color: green;">{{ article.view }}</td>
+                    <td class="text-center">{{ article.site }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% if pagination %}
+    <div class="center">
     {{ render_pagination(pagination) }}
+    </div>
+    {% endif %}
     {% else %}
     <h1>{{_('这里空空如也QAQ')}}</h1>
     {% endif %}
