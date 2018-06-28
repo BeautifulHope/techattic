@@ -1,17 +1,30 @@
 {% extends 'layout.html' %}
 {% from "bootstrap/pagination.html" import render_pagination %}
 
+{% macro sort_column(column, sort_key) %}
+{% set order = request.args.get('o') %}
+<a href="{% if order == 'desc' %}{{ append_query(s=sort_key, o='asc') }}{% else %}{{ append_query(s=sort_key, o='desc') }}{% endif %}">
+    {{_(column)}}
+    <i class="fa fa-sort"></i>
+</a>
+{{ caller() }}
+{% endmacro %}
+
 {% block app_content %}
     {% if articles %}
     <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped article-list">
             <thead>
                 <tr>
-                    <th style="width:auto;">{{_('Article')}}</th>
-                    <th class="text-center" style="width:160px;">{{_('Author')}}</th>
-                    <th class="text-center" style="width:100px;">{{_('Date')}}</th>
-                    <th class="text-center" style="width:100px;">{{_('View')}}</th>
-                    <th class="text-center" style="width:100px;">{{_('Site')}}</th>
+                    <th style="width:auto;">{{_('文章')}}</th>
+                    <th class="text-center" style="width:160px;">{{_('作者')}}</th>
+                    <th class="text-center" style="width:100px;">
+                        {% call sort_column('日期', 'date') %}{% endcall %}
+                    </th>
+                    <th class="text-center" style="width:100px;">
+                        {% call sort_column('阅览数', 'view') %}{% endcall %}
+                    </th>
+                    <th class="text-center" style="width:100px;">{{_('站点')}}</th>
                 </tr>
             </thead>
             <tbody>

@@ -6,6 +6,7 @@ from datetime import datetime
 from flask_babel import get_locale
 from app.main.forms import SearchForm
 from sqlalchemy.sql.expression import func
+from werkzeug.urls import url_encode
 
 
 @bp.before_app_request
@@ -22,7 +23,8 @@ def before_request():
 @bp.route('/')
 def index():
     page = request.args.get('page', 1, type=int)
-    pagination = Article.query.paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    article_query = get_sorted_article_query()
+    pagination = article_query.paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     articles = pagination.items
     return render_template('index.html', pagination=pagination, articles=articles)
 
@@ -44,7 +46,8 @@ def user(username):
 def search():
     q = g.search_form.q.data
     page = request.args.get('page', 1, type=int)
-    pagination = Article.query.filter(Article.title.ilike(f'%{q}%')).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    article_query = get_sorted_article_query()
+    pagination = article_query.filter(Article.title.ilike(f'%{q}%')).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     articles = pagination.items
     return render_template('index.html', pagination=pagination, articles=articles)
 
@@ -53,3 +56,37 @@ def search():
 def random():
     random_articles = Article.query.order_by(func.random()).limit(current_app.config['ARTICLE_PER_PAGE']).all()
     return render_template('index.html', articles=random_articles)
+
+
+@bp.app_template_global()
+def append_query(**new_values):
+    """Add new querystring based on the original querystring.
+
+    Returns:
+        str: url with a new querystring
+    """
+    args = request.args.copy()
+    for k, v in new_values.items():
+        args[k] = v
+    return f'{request.path}?{url_encode(args)}'
+
+
+@bp.app_template_global()
+def get_sorted_article_query():
+    """Get sorted query object of article. Judging by its sort_key and order.
+    
+    Returns:
+        object: Article.query (sorted)
+    """
+
+    sort_key = request.args.get('s')
+    order = request.args.get('o')
+    article_query = None
+    if sort_key:
+        if order == 'asc':
+            article_query = Article.query.order_by(db.asc(sort_key))
+        else:
+            article_query = Article.query.order_by(db.desc(sort_key))
+    else:
+        article_query = Article.query
+    return article_query
