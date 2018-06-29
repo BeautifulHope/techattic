@@ -1,13 +1,11 @@
 {% extends 'layout.html' %}
 {% from "bootstrap/pagination.html" import render_pagination %}
 
-{% macro sort_column(column, sort_key) %}
+{% macro sort_column(sort_key) %}
 {% set order = request.args.get('o') %}
 <a href="{% if order == 'desc' %}{{ append_query(s=sort_key, o='asc') }}{% else %}{{ append_query(s=sort_key, o='desc') }}{% endif %}">
-    {{_(column)}}
-    <i class="fa fa-sort"></i>
-</a>
 {{ caller() }}
+</a>
 {% endmacro %}
 
 {% block app_content %}
@@ -19,10 +17,14 @@
                     <th style="width:auto;">{{_('文章')}}</th>
                     <th class="text-center" style="width:160px;">{{_('作者')}}</th>
                     <th class="text-center" style="width:100px;">
-                        {% call sort_column('日期', 'date') %}{% endcall %}
+                        {% call sort_column('date') %}
+                        <div>{{_('日期')}}</div>
+                        {% endcall %}
                     </th>
                     <th class="text-center" style="width:100px;">
-                        {% call sort_column('阅览数', 'view') %}{% endcall %}
+                        {% call sort_column('view') %}
+                        <div>{{_('阅览数')}}</div>
+                        {% endcall %}
                     </th>
                     <th class="text-center" style="width:100px;">{{_('站点')}}</th>
                 </tr>

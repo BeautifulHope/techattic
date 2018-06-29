@@ -7,18 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-20 15:34+0800\n"
-"PO-Revision-Date: 2018-06-19 18:46+0800\n"
+"POT-Creation-Date: 2018-06-29 12:55+0800\n"
+"PO-Revision-Date: 2018-06-29 12:59+0800\n"
 "Last-Translator: \n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.0.8\n"
 
-#: app/__init__.py:19
+#: app/extensions.py:19
 msgid "对不起，您还没有登录！"
 msgstr "Sorry, you have to login first!"
 
@@ -34,7 +35,7 @@ msgstr "password"
 msgid "记住我"
 msgstr "remember me"
 
-#: app/auth/forms.py:12 app/templates/nav.html:18
+#: app/auth/forms.py:12 app/templates/nav.html:28
 msgid "登录"
 msgstr "login"
 
@@ -50,55 +51,102 @@ msgstr "confirm"
 msgid "注册"
 msgstr "register"
 
-#: app/auth/routes.py:18
+#: app/auth/routes.py:19
 msgid "登录成功！"
 msgstr "Login Successfully!"
 
-#: app/auth/routes.py:31
+#: app/auth/routes.py:32
 msgid "注册成功！"
 msgstr "Registered successfully!"
 
-#: app/templates/index.html:7
-msgid "这是一个flask的示例app"
-msgstr "This is a flask demo app"
+#: app/main/forms.py:9
+msgid "搜索文章"
+msgstr "Search articles"
 
-#: app/templates/index.html:17
-msgid "精炼的代码"
-msgstr "Concise code"
+#: app/templates/about.html:7
+msgid "欢迎来到Techattic"
+msgstr "Welcome to Techattic."
 
-#: app/templates/index.html:20
-msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
+#: app/templates/about.html:17
+msgid "发现最新IT技术干货"
+msgstr "Find the latest excellent IT stuff."
+
+#: app/templates/about.html:20
+msgid ""
+"我们利用爬虫技术爬取了约10家网站的优秀IT博客文章，供热爱技术的你们学习。"
+"网站几乎时刻都在更新，因此不必担心文章过时哦。"
 msgstr ""
-"Compared to other flask projects, the project's code is meticulous and "
-"easy to understand, and complies with best practices for beginners to get"
-" started quickly."
+"We use Scrapy crawler to crawl about 10 IT blog websites, for you tech "
+"lovers to learn. This website will be always up-to-date, so don't worry "
+"about it being outdated."
 
-#: app/templates/index.html:28
-msgid "完备的扩展"
-msgstr "Abundant plugin"
+#: app/templates/about.html:28
+msgid "提供收藏和上传功能"
+msgstr "Provide favorite and upload functions."
 
-#: app/templates/index.html:31
-msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
+#: app/templates/about.html:31
+msgid ""
+"遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢"
+"的文章啦！除了收藏好文章，你还可以上传自己的文章哦！"
 msgstr ""
-"This project integrates basic extensions such as front-end templates, "
-"forms, databases, and registry logins to help developers quickly build "
-"web pages."
+"When you encounter good stuff, why not grab them? Just sign up for an "
+"account and you can enjoy your favorite articles! In addition to this "
+"function, you can also upload your own articles!"
 
-#: app/templates/index.html:39
-msgid "懒人的最爱"
-msgstr "Lazyman's favourite"
+#: app/templates/about.html:39
+msgid "专注用户体验500年"
+msgstr "Devoted to user experience."
 
-#: app/templates/index.html:42
-msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
+#: app/templates/about.html:42
+msgid ""
+"本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开放"
+"API，RSS订阅等一系列给力的功能，用到就是爽到！"
 msgstr ""
-"If you want to build a full-featured website with flask quickly, then "
-"this NB template must be your best choice!"
+"In addition to basic display functions, this website also provides a "
+"series of awesome functions such as article ranking, article retrieval, "
+"article sharing, open API, and RSS subscription."
 
-#: app/templates/nav.html:27
+#: app/templates/index.html:18
+msgid "文章"
+msgstr "Article"
+
+#: app/templates/index.html:19
+msgid "作者"
+msgstr "Author"
+
+#: app/templates/index.html:22
+msgid "日期"
+msgstr "Date"
+
+#: app/templates/index.html:27
+msgid "阅览数"
+msgstr "View"
+
+#: app/templates/index.html:30
+msgid "站点"
+msgstr "Site"
+
+#: app/templates/index.html:58
+msgid "这里空空如也QAQ"
+msgstr "Nothing but us chickens!"
+
+#: app/templates/nav.html:16
+msgid "关于"
+msgstr "About"
+
+#: app/templates/nav.html:19
+msgid "随机"
+msgstr "Random"
+
+#: app/templates/nav.html:22
+msgid "订阅"
+msgstr "Subscription"
+
+#: app/templates/nav.html:37
 msgid "我的主页"
 msgstr "My home"
 
-#: app/templates/nav.html:30
+#: app/templates/nav.html:40
 msgid "登出"
 msgstr "logout"
 
@@ -136,3 +184,37 @@ msgstr "500 Interval Server Error"
 #~ msgid "密码错误，请重试！"
 #~ msgstr "Wrong password!"
 
+#~ msgid "这是一个flask的示例app"
+#~ msgstr "This is a flask demo app"
+
+#~ msgid "精炼的代码"
+#~ msgstr "Concise code"
+
+#~ msgid ""
+#~ "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合"
+#~ "初学者快速上手。"
+#~ msgstr ""
+#~ "Compared to other flask projects, the project's code is meticulous "
+#~ "and easy to understand, and complies with best practices for "
+#~ "beginners to get started quickly."
+
+#~ msgid "完备的扩展"
+#~ msgstr "Abundant plugin"
+
+#~ msgid ""
+#~ "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅"
+#~ "速构建网页。"
+#~ msgstr ""
+#~ "This project integrates basic extensions such as front-end "
+#~ "templates, forms, databases, and registry logins to help developers "
+#~ "quickly build web pages."
+
+#~ msgid "懒人的最爱"
+#~ msgstr "Lazyman's favourite"
+
+#~ msgid ""
+#~ "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之"
+#~ "选！"
+#~ msgstr ""
+#~ "If you want to build a full-featured website with flask quickly, "
+#~ "then this NB template must be your best choice!"

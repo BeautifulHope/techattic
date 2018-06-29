@@ -7,18 +7,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-20 15:34+0800\n"
-"PO-Revision-Date: 2018-06-19 18:47+0800\n"
+"POT-Creation-Date: 2018-06-29 12:55+0800\n"
+"PO-Revision-Date: 2018-06-29 13:06+0800\n"
 "Last-Translator: \n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
-"Plural-Forms: nplurals=1; plural=0\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.6.0\n"
+"X-Generator: Poedit 2.0.8\n"
 
-#: app/__init__.py:19
+#: app/extensions.py:19
 msgid "对不起，您还没有登录！"
 msgstr "その前に、ログインは必要です！"
 
@@ -34,7 +35,7 @@ msgstr "パスワード"
 msgid "记住我"
 msgstr "覚える"
 
-#: app/auth/forms.py:12 app/templates/nav.html:18
+#: app/auth/forms.py:12 app/templates/nav.html:28
 msgid "登录"
 msgstr "ログイン"
 
@@ -50,47 +51,87 @@ msgstr "パスワード確認"
 msgid "注册"
 msgstr "新规登录"
 
-#: app/auth/routes.py:18
+#: app/auth/routes.py:19
 msgid "登录成功！"
 msgstr "ログイン成功!"
 
-#: app/auth/routes.py:31
+#: app/auth/routes.py:32
 msgid "注册成功！"
 msgstr "登録成功！"
 
-#: app/templates/index.html:7
-msgid "这是一个flask的示例app"
-msgstr "これはフラスコのサンプルアプリです"
+#: app/main/forms.py:9
+msgid "搜索文章"
+msgstr "文章検索"
 
-#: app/templates/index.html:17
-msgid "精炼的代码"
-msgstr "洗練されたコード"
+#: app/templates/about.html:7
+msgid "欢迎来到Techattic"
+msgstr "Techatticへようこそ"
 
-#: app/templates/index.html:20
-msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
-msgstr "他のフラスコプロジェクトと比較して、プロジェクトのコードは細心の注意を払いやすく、初心者のためのベストプラクティスを迅速に開始することができます。"
+#: app/templates/about.html:17
+msgid "发现最新IT技术干货"
+msgstr "先端なIT技術文章を発見しょう"
 
-#: app/templates/index.html:28
-msgid "完备的扩展"
-msgstr "完全なプラグイン"
+#: app/templates/about.html:20
+msgid "我们利用爬虫技术爬取了约10家网站的优秀IT博客文章，供热爱技术的你们学习。网站几乎时刻都在更新，因此不必担心文章过时哦。"
+msgstr "私たちはテクノロジーの愛に爬虫類技術を使って約10の優れたITブログの記事をクロールしました。 ウェブサイトはほとんど常に更新されていますので、古い記事は心配しないでください。"
 
-#: app/templates/index.html:31
-msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
-msgstr "このプロジェクトでは、フロントエンドのテンプレート、フォーム、データベース、レジストリログインなどの基本的な拡張機能を統合して、開発者がWebページをすばやく構築できるようにします。"
+#: app/templates/about.html:28
+msgid "提供收藏和上传功能"
+msgstr "収集機能とアップロード機能を提供する"
 
-#: app/templates/index.html:39
-msgid "懒人的最爱"
-msgstr "怠け者の最愛"
+#: app/templates/about.html:31
+msgid "遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢的文章啦！除了收藏好文章，你还可以上传自己的文章哦！"
+msgstr "私は良い記事に遭遇し、それを集めなかったとき何が起こったのですか？アカウントにサインアップして、お気に入りの記事を収集することができます。良い記事を集めるだけでなく、自分の記事をアップロードすることもできます。"
 
-#: app/templates/index.html:42
-msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
-msgstr "フラスコでフル機能のページをすばやく作成したい場合は、このテンプレートを最善の選択肢にする必要があります。"
+#: app/templates/about.html:39
+msgid "专注用户体验500年"
+msgstr "ユーザーエクスペリエンスに焦点を当てる"
 
-#: app/templates/nav.html:27
+#: app/templates/about.html:42
+msgid "本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开放API，RSS订阅等一系列给力的功能，用到就是爽到！"
+msgstr "基本的な表示機能に加えて、このウェブサイトでは、記事ランキング、記事検索、記事共有、公開API、RSS購読などの一連の素晴らしい機能も提供しています。"
+
+#: app/templates/index.html:18
+msgid "文章"
+msgstr "文章"
+
+#: app/templates/index.html:19
+msgid "作者"
+msgstr "作家"
+
+#: app/templates/index.html:22
+msgid "日期"
+msgstr "日時"
+
+#: app/templates/index.html:27
+msgid "阅览数"
+msgstr "人気"
+
+#: app/templates/index.html:30
+msgid "站点"
+msgstr "サイト"
+
+#: app/templates/index.html:58
+msgid "这里空空如也QAQ"
+msgstr "ここになんでもないQAQ"
+
+#: app/templates/nav.html:16
+msgid "关于"
+msgstr "について"
+
+#: app/templates/nav.html:19
+msgid "随机"
+msgstr "ランダム"
+
+#: app/templates/nav.html:22
+msgid "订阅"
+msgstr "購読"
+
+#: app/templates/nav.html:37
 msgid "我的主页"
 msgstr "ホームページ"
 
-#: app/templates/nav.html:30
+#: app/templates/nav.html:40
 msgid "登出"
 msgstr "ログアウト"
 
@@ -128,3 +169,23 @@ msgstr "サーバーエラー"
 #~ msgid "密码错误，请重试！"
 #~ msgstr "パスワードが間違っています、再び試しください！"
 
+#~ msgid "这是一个flask的示例app"
+#~ msgstr "これはフラスコのサンプルアプリです"
+
+#~ msgid "精炼的代码"
+#~ msgstr "洗練されたコード"
+
+#~ msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
+#~ msgstr "他のフラスコプロジェクトと比較して、プロジェクトのコードは細心の注意を払いやすく、初心者のためのベストプラクティスを迅速に開始することができます。"
+
+#~ msgid "完备的扩展"
+#~ msgstr "完全なプラグイン"
+
+#~ msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
+#~ msgstr "このプロジェクトでは、フロントエンドのテンプレート、フォーム、データベース、レジストリログインなどの基本的な拡張機能を統合して、開発者がWebページをすばやく構築できるようにします。"
+
+#~ msgid "懒人的最爱"
+#~ msgstr "怠け者の最愛"
+
+#~ msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
+#~ msgstr "フラスコでフル機能のページをすばやく作成したい場合は、このテンプレートを最善の選択肢にする必要があります。"

@@ -4,6 +4,7 @@ html {
     overflow-y: scroll;
 }
 
+/* table */
 .article-list > tbody > tr > td {
     vertical-align: middle;
     overflow: hidden;
