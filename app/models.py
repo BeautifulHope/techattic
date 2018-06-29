@@ -3,6 +3,7 @@ from flask_login import UserMixin
 from datetime import datetime
 from hashlib import md5
 from flask import url_for
+from datetime import datetime
 
 
 class User(db.Model, UserMixin):
@@ -52,7 +53,7 @@ class Article(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(100))
     author = db.Column(db.String(20))
-    date = db.Column(db.DateTime, index=True)
+    date = db.Column(db.DateTime, index=True, default=datetime.utcnow)
     source = db.Column(db.String(250))
     view = db.Column(db.Integer)
     site = db.Column(db.String(20))
@@ -61,3 +62,24 @@ class Article(db.Model):
 
     def __repr__(self):
         return f'<Article {self.title}>'
+
+    def to_dict(self):
+        data = {
+            'id': self.id,
+            'title': self.title,
+            'author': self.author,
+            'date': str(self.date),
+            'source': self.source,
+            'view': self.view,
+            'site': self.site
+        }
+        return data
+    
+    def from_dict(self, data):
+        for field in ['title', 'source', 'site', 'view', 'author']:
+            if field in data:
+                setattr(self, field, data[field])
+        if getattr(self, 'view') is None:
+            setattr(self, 'view', 0)
+        if getattr(self, 'author') is None:
+            setattr(self, 'author', '佚名')
