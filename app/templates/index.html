@@ -3,7 +3,9 @@
 
 {% macro sort_column(sort_key) %}
 {% set order = request.args.get('o') %}
+{% if can_sort %}
 <a href="{% if order == 'desc' %}{{ append_query(s=sort_key, o='asc') }}{% else %}{{ append_query(s=sort_key, o='desc') }}{% endif %}">
+{% endif %}
 {{ caller() }}
 </a>
 {% endmacro %}

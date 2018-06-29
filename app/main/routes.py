@@ -26,7 +26,7 @@ def index():
     article_query = get_sorted_article_query()
     pagination = article_query.paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     articles = pagination.items
-    return render_template('index.html', pagination=pagination, articles=articles)
+    return render_template('index.html', pagination=pagination, articles=articles, can_sort=True)
 
 
 @bp.route('/about')
@@ -49,13 +49,13 @@ def search():
     article_query = get_sorted_article_query()
     pagination = article_query.filter(Article.title.ilike(f'%{q}%')).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     articles = pagination.items
-    return render_template('index.html', pagination=pagination, articles=articles)
+    return render_template('index.html', pagination=pagination, articles=articles, can_sort=True)
 
 
 @bp.route('/random')
 def random():
     random_articles = Article.query.order_by(func.random()).limit(current_app.config['ARTICLE_PER_PAGE']).all()
-    return render_template('index.html', articles=random_articles)
+    return render_template('index.html', articles=random_articles, can_sort=False)
 
 
 @bp.app_template_global()
