@@ -10,6 +10,8 @@
 
 ## 开发流程
 
+### 网站搭建
+
 把项目下载到本地
 
 ``` bash
@@ -29,4 +31,29 @@ pip install -r requirements.txt
 ``` bash
 export FLASK_APP=techattic.py
 flask run
+```
+
+### 数据库搭建
+
+在MySQL中创建db
+
+``` sql
+CREATE USER 'test'@'localhost' IDENTIFIED BY 'test123';
+GRANT ALL PRIVILEGES ON *.* TO 'test'@'localhost';
+FLUSH PRIVILEGES;
+CREATE DATABASE techattic DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+```
+
+用爬虫获取数据
+
+``` bash
+cd crawler
+python fetchall.py
+```
+
+最后迁移数据库，完成！
+
+``` bash
+flask db migrate
+flask db upgrade
 ```
