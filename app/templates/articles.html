@@ -1,0 +1,57 @@
+{% from "bootstrap/pagination.html" import render_pagination %}
+
+{% macro sort_column(sort_key) %}
+{% set order = request.args.get('o') %}
+{% if can_sort %}
+<a href="{% if order == 'desc' %}{{ append_query(s=sort_key, o='asc') }}{% else %}{{ append_query(s=sort_key, o='desc') }}{% endif %}">
+{% endif %}
+{{ caller() }}
+</a>
+{% endmacro %}
+
+{% if articles %}
+<div class="table-responsive">
+    <table class="table table-bordered table-hover table-striped article-list">
+        <thead>
+            <tr>
+                <th style="width:auto;">{{_('文章')}}</th>
+                <th class="text-center" style="width:160px;">{{_('作者')}}</th>
+                <th class="text-center" style="width:100px;">
+                    {% call sort_column('date') %}
+                    <div>{{_('日期')}}</div>
+                    {% endcall %}
+                </th>
+                <th class="text-center" style="width:100px;">
+                    {% call sort_column('view') %}
+                    <div>{{_('阅览数')}}</div>
+                    {% endcall %}
+                </th>
+                <th class="text-center" style="width:100px;">{{_('站点')}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for article in articles %}
+            <tr>
+                <td>
+                    <a href="{{ article.source }}" target="_blank">{{ article.title }}</a>
+                </td>
+                <td class="text-center">
+                    <a href="{{ url_for('main.search_by_field', field='author', value=article.author) }}">{{ article.author }}</a>
+                </td>
+                <td class="text-center">{{ moment(article.date).fromNow() }}</td>
+                <td class="text-center" style="color: green;">{{ article.view }}</td>
+                <td class="text-center">
+                    <a href="{{ url_for('main.search_by_field', field='site', value=article.site) }}">{{ article.site }}</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% if pagination %}
+<div class="center">
+    {{ render_pagination(pagination) }}
+</div>
+{% endif %} {% else %}
+<h2>{{_('这里神马都没有，快去上传文章吧:)')}}</h2>
+{% endif %}

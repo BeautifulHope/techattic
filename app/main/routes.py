@@ -1,12 +1,13 @@
 from app.main import bp
-from flask import render_template, g, request, current_app, make_response
+from flask import render_template, g, request, current_app, make_response, flash, redirect, url_for
 from flask_login import login_required, current_user
 from app.models import User, db, Article
 from datetime import datetime
 from flask_babel import get_locale
-from app.main.forms import SearchForm
+from app.main.forms import SearchForm, UploadForm
 from sqlalchemy.sql.expression import func
 from werkzeug.urls import url_encode
+from flask_babel import _
 
 
 @bp.before_app_request
@@ -38,7 +39,10 @@ def about():
 @login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
-    return render_template('user.html', user=user)
+    page = request.args.get('page', 1, type=int)
+    pagination = Article.query.filter_by(uploader=current_user.username).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    uploaded_articles = pagination.items
+    return render_template('user.html', user=user, articles=uploaded_articles, can_sort=False)
 
 
 @bp.route('/search')
@@ -81,6 +85,19 @@ def rss():
     response = make_response(rss)
     response.headers['Content-Type'] = 'application/xml'
     return response
+
+
+@bp.route('/upload', methods=['GET', 'POST'])
+@login_required
+def upload():
+    form = UploadForm()
+    if form.validate_on_submit():
+        article = Article(title=form.title.data, source=form.source.data, author=form.author.data, site=form.site.data, uploader=current_user.username)
+        db.session.add(article)
+        db.session.commit()
+        flash(_('发表成功！'), 'success')
+        return redirect(url_for('main.index'))
+    return render_template('upload.html', form=form)
 
 
 @bp.app_template_global()

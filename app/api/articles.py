@@ -13,8 +13,8 @@ class ArticleResource(Resource):
         data = request.get_json() or {}
         if not all(field in data for field in ['title', 'source', 'site']):
             abort(400, message='You must have 3 fields: title, source and site.')
-        if Article.query.filter_by(title=data['title']).first():
-            abort(400, message='Title already exists!')
+        if Article.query.filter_by(title=data['source']).first():
+            abort(400, message='This article already exists!')
         article = Article()
         article.from_dict(data)
         db.session.add(article)
