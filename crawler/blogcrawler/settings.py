@@ -90,4 +90,4 @@ MONGO_DATABASE = 'infomania'
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-MYSQL_PASSWORD = 'wang7251'
+MYSQL_PASSWORD = input('Enter MySQL password: ')
