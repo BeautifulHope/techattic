@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-29 12:55+0800\n"
-"PO-Revision-Date: 2018-06-29 12:59+0800\n"
+"POT-Creation-Date: 2018-06-29 21:28+0800\n"
+"PO-Revision-Date: 2018-06-29 21:31+0800\n"
 "Last-Translator: \n"
 "Language: en\n"
 "Language-Team: en <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr "password"
 msgid "记住我"
 msgstr "remember me"
 
-#: app/auth/forms.py:12 app/templates/nav.html:28
+#: app/auth/forms.py:12 app/templates/nav.html:31
 msgid "登录"
 msgstr "login"
 
@@ -59,9 +59,33 @@ msgstr "Login Successfully!"
 msgid "注册成功！"
 msgstr "Registered successfully!"
 
-#: app/main/forms.py:9
+#: app/main/forms.py:10
 msgid "搜索文章"
 msgstr "Search articles"
+
+#: app/main/forms.py:21
+msgid "标题"
+msgstr "Title"
+
+#: app/main/forms.py:22
+msgid "链接"
+msgstr "Source"
+
+#: app/main/forms.py:23 app/templates/articles.html:18
+msgid "作者"
+msgstr "Author"
+
+#: app/main/forms.py:24 app/templates/articles.html:29
+msgid "站点"
+msgstr "Site"
+
+#: app/main/forms.py:25
+msgid "提交"
+msgstr "Submit"
+
+#: app/main/routes.py:98
+msgid "发表成功！"
+msgstr "Upload successfully!"
 
 #: app/templates/about.html:7
 msgid "欢迎来到Techattic"
@@ -81,17 +105,17 @@ msgstr ""
 "about it being outdated."
 
 #: app/templates/about.html:28
-msgid "提供收藏和上传功能"
-msgstr "Provide favorite and upload functions."
+msgid "提供文章上传功能"
+msgstr "Provide article upload function."
 
 #: app/templates/about.html:31
 msgid ""
-"遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢"
-"的文章啦！除了收藏好文章，你还可以上传自己的文章哦！"
+"遇到好文章，不一起分享怎么行？只需注册一个账户，你就可以尽情地上传你喜欢"
+"的文章啦！注意不要上传与IT技术无关的文章哦！"
 msgstr ""
-"When you encounter good stuff, why not grab them? Just sign up for an "
-"account and you can enjoy your favorite articles! In addition to this "
-"function, you can also upload your own articles!"
+"When you encounter a good article, why not share it? Just sign up for "
+"an account and you'll be able to upload your favorite articles! Be "
+"careful not to upload articles that are not related to IT technology!"
 
 #: app/templates/about.html:39
 msgid "专注用户体验500年"
@@ -99,35 +123,27 @@ msgstr "Devoted to user experience."
 
 #: app/templates/about.html:42
 msgid ""
-"本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开放"
-"API，RSS订阅等一系列给力的功能，用到就是爽到！"
+"本网站除了基本的展示功能外，还提供了文章排序，文章检索，开放API，RSS订阅"
+"等一系列给力的功能，用到就是爽到！"
 msgstr ""
-"In addition to basic display functions, this website also provides a "
-"series of awesome functions such as article ranking, article retrieval, "
-"article sharing, open API, and RSS subscription."
+"In addition to the basic features of the site, but also provides a "
+"ranking of articles, article Search, open Api,rss subscription, such as "
+"a series of functions to the force, use is to cool!"
 
-#: app/templates/index.html:18
+#: app/templates/articles.html:17
 msgid "文章"
 msgstr "Article"
 
-#: app/templates/index.html:19
-msgid "作者"
-msgstr "Author"
-
-#: app/templates/index.html:22
+#: app/templates/articles.html:21
 msgid "日期"
 msgstr "Date"
 
-#: app/templates/index.html:27
+#: app/templates/articles.html:26
 msgid "阅览数"
 msgstr "View"
 
-#: app/templates/index.html:30
-msgid "站点"
-msgstr "Site"
-
-#: app/templates/index.html:58
-msgid "这里空空如也QAQ"
+#: app/templates/articles.html:56
+msgid "这里神马都没有，快去上传文章吧:)"
 msgstr "Nothing but us chickens!"
 
 #: app/templates/nav.html:16
@@ -142,17 +158,29 @@ msgstr "Random"
 msgid "订阅"
 msgstr "Subscription"
 
-#: app/templates/nav.html:37
+#: app/templates/nav.html:25
+msgid "上传"
+msgstr "Upload"
+
+#: app/templates/nav.html:40
 msgid "我的主页"
 msgstr "My home"
 
-#: app/templates/nav.html:40
+#: app/templates/nav.html:43
 msgid "登出"
 msgstr "logout"
+
+#: app/templates/upload.html:6
+msgid "上传文章"
+msgstr "Upload your article"
 
 #: app/templates/user.html:10
 msgid "最近活动于:"
 msgstr "Recently at:"
+
+#: app/templates/user.html:16
+msgid "我上传的文章"
+msgstr "My upload"
 
 #: app/templates/auth/login.html:6
 msgid "请登录"
@@ -218,3 +246,25 @@ msgstr "500 Interval Server Error"
 #~ msgstr ""
 #~ "If you want to build a full-featured website with flask quickly, "
 #~ "then this NB template must be your best choice!"
+
+#~ msgid "提供收藏和上传功能"
+#~ msgstr "Provide favorite and upload functions."
+
+#~ msgid ""
+#~ "遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你"
+#~ "喜欢的文章啦！除了收藏好文章，你还可以上传自己的文章哦！"
+#~ msgstr ""
+#~ "When you encounter good stuff, why not grab them? Just sign up for "
+#~ "an account and you can enjoy your favorite articles! In addition to "
+#~ "this function, you can also upload your own articles!"
+
+#~ msgid ""
+#~ "本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开"
+#~ "放API，RSS订阅等一系列给力的功能，用到就是爽到！"
+#~ msgstr ""
+#~ "In addition to basic display functions, this website also provides a "
+#~ "series of awesome functions such as article ranking, article "
+#~ "retrieval, article sharing, open API, and RSS subscription."
+
+#~ msgid "这里空空如也QAQ"
+#~ msgstr "Nothing but us chickens!"

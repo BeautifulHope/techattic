@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-29 12:55+0800\n"
-"PO-Revision-Date: 2018-06-29 13:06+0800\n"
+"POT-Creation-Date: 2018-06-29 21:28+0800\n"
+"PO-Revision-Date: 2018-06-29 21:36+0800\n"
 "Last-Translator: \n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -35,7 +35,7 @@ msgstr "パスワード"
 msgid "记住我"
 msgstr "覚える"
 
-#: app/auth/forms.py:12 app/templates/nav.html:28
+#: app/auth/forms.py:12 app/templates/nav.html:31
 msgid "登录"
 msgstr "ログイン"
 
@@ -59,9 +59,33 @@ msgstr "ログイン成功!"
 msgid "注册成功！"
 msgstr "登録成功！"
 
-#: app/main/forms.py:9
+#: app/main/forms.py:10
 msgid "搜索文章"
 msgstr "文章検索"
+
+#: app/main/forms.py:21
+msgid "标题"
+msgstr "タイトル"
+
+#: app/main/forms.py:22
+msgid "链接"
+msgstr "リンク"
+
+#: app/main/forms.py:23 app/templates/articles.html:18
+msgid "作者"
+msgstr "作家"
+
+#: app/main/forms.py:24 app/templates/articles.html:29
+msgid "站点"
+msgstr "サイト"
+
+#: app/main/forms.py:25
+msgid "提交"
+msgstr "送信"
+
+#: app/main/routes.py:98
+msgid "发表成功！"
+msgstr "発表成功！"
 
 #: app/templates/about.html:7
 msgid "欢迎来到Techattic"
@@ -72,48 +96,50 @@ msgid "发现最新IT技术干货"
 msgstr "先端なIT技術文章を発見しょう"
 
 #: app/templates/about.html:20
-msgid "我们利用爬虫技术爬取了约10家网站的优秀IT博客文章，供热爱技术的你们学习。网站几乎时刻都在更新，因此不必担心文章过时哦。"
-msgstr "私たちはテクノロジーの愛に爬虫類技術を使って約10の優れたITブログの記事をクロールしました。 ウェブサイトはほとんど常に更新されていますので、古い記事は心配しないでください。"
+msgid ""
+"我们利用爬虫技术爬取了约10家网站的优秀IT博客文章，供热爱技术的你们学习。网站几乎时刻都在更新，因此不必担心文章过时"
+"哦。"
+msgstr ""
+"私たちはテクノロジーの愛に爬虫類技術を使って約10の優れたITブログの記事をクロールしました。 ウェブサイトはほとんど常"
+"に更新されていますので、古い記事は心配しないでください。"
 
 #: app/templates/about.html:28
-msgid "提供收藏和上传功能"
+msgid "提供文章上传功能"
 msgstr "収集機能とアップロード機能を提供する"
 
 #: app/templates/about.html:31
-msgid "遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢的文章啦！除了收藏好文章，你还可以上传自己的文章哦！"
-msgstr "私は良い記事に遭遇し、それを集めなかったとき何が起こったのですか？アカウントにサインアップして、お気に入りの記事を収集することができます。良い記事を集めるだけでなく、自分の記事をアップロードすることもできます。"
+msgid ""
+"遇到好文章，不一起分享怎么行？只需注册一个账户，你就可以尽情地上传你喜欢的文章啦！注意不要上传与IT技术无关的文章"
+"哦！"
+msgstr ""
+"良い記事を満たすため、どのように共有しないですか。 ちょうどアカウントにサインアップし、最大限にあなたのお気にいりの"
+"記事をアップロードすることができます。 それを行うには何もない記事をアップロードしないように技術ああ!"
 
 #: app/templates/about.html:39
 msgid "专注用户体验500年"
 msgstr "ユーザーエクスペリエンスに焦点を当てる"
 
 #: app/templates/about.html:42
-msgid "本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开放API，RSS订阅等一系列给力的功能，用到就是爽到！"
-msgstr "基本的な表示機能に加えて、このウェブサイトでは、記事ランキング、記事検索、記事共有、公開API、RSS購読などの一連の素晴らしい機能も提供しています。"
+msgid "本网站除了基本的展示功能外，还提供了文章排序，文章检索，开放API，RSS订阅等一系列给力的功能，用到就是爽到！"
+msgstr ""
+"サイトの基本的な機能に加えて、記事、記事検索のランキングを開く力関数のシリーズなど、rss サブスクリプション Api、使"
+"用は、クールを提供します!"
 
-#: app/templates/index.html:18
+#: app/templates/articles.html:17
 msgid "文章"
 msgstr "文章"
 
-#: app/templates/index.html:19
-msgid "作者"
-msgstr "作家"
-
-#: app/templates/index.html:22
+#: app/templates/articles.html:21
 msgid "日期"
 msgstr "日時"
 
-#: app/templates/index.html:27
+#: app/templates/articles.html:26
 msgid "阅览数"
 msgstr "人気"
 
-#: app/templates/index.html:30
-msgid "站点"
-msgstr "サイト"
-
-#: app/templates/index.html:58
-msgid "这里空空如也QAQ"
-msgstr "ここになんでもないQAQ"
+#: app/templates/articles.html:56
+msgid "这里神马都没有，快去上传文章吧:)"
+msgstr "こちらはなんてもないQAQ"
 
 #: app/templates/nav.html:16
 msgid "关于"
@@ -127,17 +153,29 @@ msgstr "ランダム"
 msgid "订阅"
 msgstr "購読"
 
-#: app/templates/nav.html:37
+#: app/templates/nav.html:25
+msgid "上传"
+msgstr "アップロード"
+
+#: app/templates/nav.html:40
 msgid "我的主页"
 msgstr "ホームページ"
 
-#: app/templates/nav.html:40
+#: app/templates/nav.html:43
 msgid "登出"
 msgstr "ログアウト"
+
+#: app/templates/upload.html:6
+msgid "上传文章"
+msgstr "文章アップロード"
 
 #: app/templates/user.html:10
 msgid "最近活动于:"
 msgstr "最近の活躍："
+
+#: app/templates/user.html:16
+msgid "我上传的文章"
+msgstr "わたしのアップロードした文章"
 
 #: app/templates/auth/login.html:6
 msgid "请登录"
@@ -176,16 +214,41 @@ msgstr "サーバーエラー"
 #~ msgstr "洗練されたコード"
 
 #~ msgid "比起其他的flask项目，此项目的代码力求精炼易懂，并且符合最佳实践，适合初学者快速上手。"
-#~ msgstr "他のフラスコプロジェクトと比較して、プロジェクトのコードは細心の注意を払いやすく、初心者のためのベストプラクティスを迅速に開始することができます。"
+#~ msgstr ""
+#~ "他のフラスコプロジェクトと比較して、プロジェクトのコードは細心の注意を払いやすく、初心者のためのベストプラクティ"
+#~ "スを迅速に開始することができます。"
 
 #~ msgid "完备的扩展"
 #~ msgstr "完全なプラグイン"
 
 #~ msgid "此项目集成了前端模板、表单、数据库、注册登录等基础扩展，方便开发者迅速构建网页。"
-#~ msgstr "このプロジェクトでは、フロントエンドのテンプレート、フォーム、データベース、レジストリログインなどの基本的な拡張機能を統合して、開発者がWebページをすばやく構築できるようにします。"
+#~ msgstr ""
+#~ "このプロジェクトでは、フロントエンドのテンプレート、フォーム、データベース、レジストリログインなどの基本的な拡張"
+#~ "機能を統合して、開発者がWebページをすばやく構築できるようにします。"
 
 #~ msgid "懒人的最爱"
 #~ msgstr "怠け者の最愛"
 
 #~ msgid "如果你想用flask迅速搭建一个功能齐全的页面，那此模板一定是你的不二之选！"
-#~ msgstr "フラスコでフル機能のページをすばやく作成したい場合は、このテンプレートを最善の選択肢にする必要があります。"
+#~ msgstr ""
+#~ "フラスコでフル機能のページをすばやく作成したい場合は、このテンプレートを最善の選択肢にする必要があります。"
+
+#~ msgid "提供收藏和上传功能"
+#~ msgstr "収集機能とアップロード機能を提供する"
+
+#~ msgid ""
+#~ "遇到好文章，不收藏下来怎么行？只需注册一个账户，你就可以尽情地收藏你喜欢的文章啦！除了收藏好文章，你还可以上传自"
+#~ "己的文章哦！"
+#~ msgstr ""
+#~ "私は良い記事に遭遇し、それを集めなかったとき何が起こったのですか？アカウントにサインアップして、お気に入りの記事"
+#~ "を収集することができます。良い記事を集めるだけでなく、自分の記事をアップロードすることもできます。"
+
+#~ msgid ""
+#~ "本网站除了基本的展示功能外，还提供了文章排序，文章检索，文章分享，开放API，RSS订阅等一系列给力的功能，用到就是爽"
+#~ "到！"
+#~ msgstr ""
+#~ "基本的な表示機能に加えて、このウェブサイトでは、記事ランキング、記事検索、記事共有、公開API、RSS購読などの一連の"
+#~ "素晴らしい機能も提供しています。"
+
+#~ msgid "这里空空如也QAQ"
+#~ msgstr "ここになんでもないQAQ"
