@@ -1,5 +1,5 @@
 from app.main import bp
-from flask import render_template, g, request, current_app
+from flask import render_template, g, request, current_app, make_response
 from flask_login import login_required, current_user
 from app.models import User, db, Article
 from datetime import datetime
@@ -72,6 +72,15 @@ def search_by_field(field, value):
     pagination = filtered_query.paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     articles = pagination.items
     return render_template('index.html', pagination=pagination, articles=articles, can_sort=True)
+
+
+@bp.route('/rss')
+def rss():
+    articles = Article.query.limit(10)
+    rss = render_template('rss.xml', articles=articles)
+    response = make_response(rss)
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 
 @bp.app_template_global()

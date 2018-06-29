@@ -1,0 +1,17 @@
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>techattic</title>
+        <link>https://www.techattic.com</link>
+        <description>Integrate many IT blog sites all into one.</description>
+        {% for article in articles %}
+        <item>
+            <title>{{ article.title }}</title>
+            <link>{{ article.source }}</link>
+            <author>{{ article.author }}</author>
+            <pubDate>{{ article.date }}</pubDate>
+            <view>{{ article.view }}</view>
+            <site>{{ article.site }}</site>
+        </item>
+        {% endfor %}
+    </channel>
+</rss>
