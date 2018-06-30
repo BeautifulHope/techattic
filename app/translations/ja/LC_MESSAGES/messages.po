@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-06-29 21:28+0800\n"
-"PO-Revision-Date: 2018-06-29 21:36+0800\n"
+"POT-Creation-Date: 2018-06-30 11:36+0800\n"
+"PO-Revision-Date: 2018-06-30 11:37+0800\n"
 "Last-Translator: \n"
 "Language: ja\n"
 "Language-Team: ja <LL@li.org>\n"
@@ -83,7 +83,7 @@ msgstr "サイト"
 msgid "提交"
 msgstr "送信"
 
-#: app/main/routes.py:98
+#: app/main/routes.py:96
 msgid "发表成功！"
 msgstr "発表成功！"
 
@@ -173,9 +173,9 @@ msgstr "文章アップロード"
 msgid "最近活动于:"
 msgstr "最近の活躍："
 
-#: app/templates/user.html:16
-msgid "我上传的文章"
-msgstr "わたしのアップロードした文章"
+#: app/templates/user.html:17
+msgid "上传的文章"
+msgstr "アップロードされた文章"
 
 #: app/templates/auth/login.html:6
 msgid "请登录"
@@ -252,3 +252,6 @@ msgstr "サーバーエラー"
 
 #~ msgid "这里空空如也QAQ"
 #~ msgstr "ここになんでもないQAQ"
+
+#~ msgid "我上传的文章"
+#~ msgstr "わたしのアップロードした文章"

@@ -15,7 +15,7 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
-        g.search_form = SearchForm()
+    g.search_form = SearchForm()
     g.locale = str(get_locale())
     if g.locale.startswith('zh'):
         g.locale += '-cn'
@@ -36,17 +36,15 @@ def about():
 
 
 @bp.route('/user/<string:username>')
-@login_required
 def user(username):
     user = User.query.filter_by(username=username).first_or_404()
     page = request.args.get('page', 1, type=int)
-    pagination = Article.query.filter_by(uploader=current_user.username).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
+    pagination = Article.query.filter_by(uploader=username).paginate(page, per_page=current_app.config['ARTICLE_PER_PAGE'])
     uploaded_articles = pagination.items
     return render_template('user.html', user=user, articles=uploaded_articles, can_sort=False)
 
 
 @bp.route('/search')
-@login_required
 def search():
     q = g.search_form.q.data
     page = request.args.get('page', 1, type=int)
