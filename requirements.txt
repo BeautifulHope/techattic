@@ -12,7 +12,7 @@ flask-admin
 scrapy
 scrapy-fake-useragent
 scrapyd
-scrapy-heroku
+scrapyd-client
 arrow
 redis
 pandas
