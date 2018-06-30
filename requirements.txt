@@ -14,9 +14,11 @@ scrapy
 scrapy-fake-useragent
 scrapyd
 scrapyd-client
+scrapyd-heroku
 arrow
 pymysql
 redis
 pandas
 gunicorn
 psycopg2
+python-dotenv

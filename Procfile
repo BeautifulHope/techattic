@@ -1,1 +1,2 @@
-web: flask db upgrade; flask translate compile; python crawler/fetchall.py; gunicorn techattic:app
+web: flask db upgrade; flask translate compile; gunicorn techattic:app
+worker: python crawler/fetchall.py
