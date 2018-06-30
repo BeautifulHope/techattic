@@ -12,10 +12,8 @@ flask-admin
 scrapy
 scrapy-fake-useragent
 scrapyd
-scrapyd-client
-scrapyd-heroku
+scrapy-heroku
 arrow
-pymysql
 redis
 pandas
 gunicorn
