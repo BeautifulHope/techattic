@@ -14,7 +14,6 @@ scrapy
 scrapy-fake-useragent
 scrapyd
 scrapyd-client
-pywin32
 arrow
 pymysql
 redis
