@@ -1,9 +1,10 @@
-from app.extensions import db, login, bcrypt
+from app.extensions import db, login
 from flask_login import UserMixin
 from datetime import datetime
 from hashlib import md5
 from flask import url_for
 from datetime import datetime
+from werkzeug import security
 
 
 class User(db.Model, UserMixin):
@@ -17,10 +18,10 @@ class User(db.Model, UserMixin):
         return f'<User {self.username}>'
 
     def set_password(self, password):
-        self.password_hash = bcrypt.generate_password_hash(password)
+        self.password_hash = security.generate_password_hash(password)
     
     def check_password(self, password):
-        return bcrypt.check_password_hash(self.password_hash, password)
+        return security.check_password_hash(self.password_hash, password)
     
     @login.user_loader
     def load_user(user_id):

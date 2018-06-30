@@ -16,7 +16,6 @@ def create_app(config_class=Config):
     db.init_app(app)
     migrate.init_app(app, db)
     login.init_app(app)
-    bcrypt.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
     admin.init_app(app)
