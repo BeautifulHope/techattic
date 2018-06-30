@@ -98,6 +98,11 @@ def upload():
     return render_template('upload.html', form=form)
 
 
+@bp.route('/api')
+def api():
+    return render_template('api.html')
+
+
 @bp.app_template_global()
 def append_query(**new_values):
     """Add new querystring based on the original querystring.
