@@ -1,12 +1,14 @@
 # Techattic
 
-一家利用爬虫技术将众多IT技术博客站点集成于一站的网站。
+一家利用[爬虫技术](https://github.com/alphardex/blogcrawler)将众多IT技术博客站点集成于一站的网站。
 
 **注意：本网站仅充当一个技术文章的搜索引擎（通俗点讲是桥梁），和文章的版权毫无半点关系。**
 
+项目demo地址：[猛戳这里](http://techattic.herokuapp.com/)
+
 ## 架构
 
-- flask
+- Flask
 - Scrapy
 
 ## 开发流程
