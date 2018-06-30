@@ -57,8 +57,6 @@ class Article(db.Model):
     source = db.Column(db.String(250))
     view = db.Column(db.Integer)
     site = db.Column(db.String(20))
-    fav_user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    fav_by = db.relationship('User', backref=db.backref('fav_articles', lazy=True))
     uploader = db.Column(db.String(20))
 
     def __repr__(self):
