@@ -11,7 +11,7 @@ flask-babel
 flask-restful
 flask-admin
 scrapy
-scrapy-fakeuseragent
+scrapy-fake-useragent
 scrapyd
 scrapyd-client
 pywin32
