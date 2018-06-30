@@ -12,8 +12,12 @@ flask-restful
 flask-admin
 scrapy
 scrapy-fakeuseragent
+scrapyd
+scrapyd-client
 pywin32
 arrow
 pymysql
 redis
 pandas
+gunicorn
+psycopg2

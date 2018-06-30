@@ -9,3 +9,4 @@ class Config:
     LANGUAGES = ['zh', 'en', 'ja']
     BABEL_DEFAULT_LOCALE = 'zh'
     ARTICLE_PER_PAGE = 20
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
