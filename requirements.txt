@@ -8,14 +8,6 @@ flask-debugtoolbar
 flask-moment
 flask-babel
 flask-restful
-flask-admin
-scrapy
-scrapy-fake-useragent
-scrapyd
-scrapyd-client
-arrow
-redis
-pandas
 gunicorn
 psycopg2-binary
 python-dotenv
