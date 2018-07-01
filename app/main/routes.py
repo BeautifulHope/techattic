@@ -78,7 +78,7 @@ def search_by_field(field, value):
 
 @bp.route('/rss')
 def rss():
-    articles = Article.query.limit(10)
+    articles = Article.query.order_by(db.desc('date')).limit(10)
     rss = render_template('rss.xml', articles=articles)
     response = make_response(rss)
     response.headers['Content-Type'] = 'application/xml'
@@ -118,13 +118,13 @@ def append_query(**new_values):
 
 @bp.app_template_global()
 def get_sorted_article_query():
-    """Get sorted query object of article. Judging by its sort_key and order.
+    """Get sorted query object of article. Judging by its sort_key [default: date] and order.
     
     Returns:
         object: Article.query (sorted)
     """
-    sort_key = request.args.get('s')
-    order = request.args.get('o')
+    sort_key = request.args.get('s', 'date')
+    order = request.args.get('o', 'desc')
     article_query = None
     if sort_key:
         if order == 'asc':
